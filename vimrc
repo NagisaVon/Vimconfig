@@ -82,7 +82,7 @@ function CompileRun()
 	" help python3
 	if &filetype=='python'
 		" Cannot actually use alias in zshrc
-		exec "!/usr/local/Cellar/python3/3.7.3/bin/python3 %"  
+		exec "!/usr/local/bin/python3 %"
 	endif
 	if &filetype=='java'
 		exec "!javac %" 
