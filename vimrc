@@ -94,7 +94,7 @@ endfunction
 
 "inoremap ( ()<ESC>i
 "inoremap [ []<ESC>i
-"inoremap { {}<ESC>i
+inoremap { {}<ESC>i
 "inoremap < <><ESC>i
 " 括号补全
 " nnoremap <space> za
