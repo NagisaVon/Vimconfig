@@ -101,11 +101,11 @@ inoremap { {}<ESC>i
 " 用空格代替za折叠
 
 """"""""""""""""""""""""""""""""""about Bundle""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 " fugitive : git wrapper, required for vundle
 Bundle 'tpope/vim-fugitive'
 "L9 : autocomplete library, must install if FuzzyFinder 
