@@ -88,6 +88,12 @@ function CompileRun()
 		exec "!javac %" 
 		exec "!java %<"
 	endif
+	if &filetype=='asm'
+		let filename=expand('%:r')
+		exec "!nasm -felf64 -gdwarf %"
+		exec "!ld -o ".filename." ".filename.".o"
+		exec "!./".filename
+	endif
 endfunction
 " <C-R>(编译和)运行C/C++程序 , 可输入sh进入bash模式
 " :h keycodes can view special key code 
@@ -102,7 +108,7 @@ inoremap { {}<ESC>i
 
 """"""""""""""""""""""""""""""""""about Bundle""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 " let Vundle manage Vundle
 " required!
 Bundle 'VundleVim/Vundle.vim'
